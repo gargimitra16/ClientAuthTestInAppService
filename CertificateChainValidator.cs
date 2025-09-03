@@ -74,6 +74,44 @@ namespace ClientCertAuthDemo
             return true;
         }
 
+        public bool ValidateCertificateWithSystemTrust(X509Certificate2 clientCertificate)
+        {
+            if (clientCertificate == null)
+            {
+                _logger.LogWarning("System trust validation failed: Certificate is null");
+                return false;
+            }
+
+            _logger.LogInformation("System trust validating certificate: Subject={Subject}, Thumbprint={Thumbprint}, Issuer={Issuer}",
+                clientCertificate.Subject, clientCertificate.Thumbprint, clientCertificate.Issuer);
+
+            using var chain = new X509Chain
+            {
+                ChainPolicy =
+                {
+                    RevocationMode = X509RevocationMode.Online,
+                    RevocationFlag = X509RevocationFlag.EntireChain,
+                    VerificationFlags = X509VerificationFlags.NoFlag
+                }
+            };
+
+            // Do not add any extra store certificates; rely on system trust
+            bool isChainValid = chain.Build(clientCertificate);
+
+            if (!isChainValid)
+            {
+                foreach (var status in chain.ChainStatus)
+                {
+                    _logger.LogWarning("System trust chain validation error: {Status} - {StatusInformation}",
+                        status.Status, status.StatusInformation);
+                }
+                return false;
+            }
+
+            _logger.LogInformation("System trust certificate validation successful");
+            return true;
+        }
+
         private bool IsCertificateInTrustedCollection(X509Certificate2 certificate)
         {
             foreach (var trustedCert in _trustedCaCertificates)

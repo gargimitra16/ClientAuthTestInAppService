@@ -35,7 +35,7 @@ builder.Services.AddAuthentication(CertificateAuthenticationDefaults.Authenticat
             OnCertificateValidated = context => {
                 var validator = context.HttpContext.RequestServices.GetRequiredService<CertificateChainValidator>();
                 
-                if (validator.ValidateCertificate(context.ClientCertificate))
+                if (validator.ValidateCertificateWithSystemTrust(context.ClientCertificate))
                 {
                     context.Success();
                 }
