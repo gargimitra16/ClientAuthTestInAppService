@@ -13,6 +13,7 @@ namespace ClientCertAuthDemo
         public CertificateChainValidator(ILogger<CertificateChainValidator> logger)
         {
             _logger = logger;
+            _logger.LogInformation("Starting the loading of trusted CA certificates.");
             _trustedCaCertificates = LoadTrustedCaCertificates();
         }
 
