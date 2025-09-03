@@ -52,6 +52,21 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+// Add this block before authentication
+app.Use(async (context, next) =>
+{
+    if (context.Connection.ClientCertificate == null && context.Request.Headers.ContainsKey("X-ARR-ClientCert"))
+    {
+        var certHeader = context.Request.Headers["X-ARR-ClientCert"];
+        if (!string.IsNullOrEmpty(certHeader))
+        {
+            var bytes = Convert.FromBase64String(certHeader);
+            var cert = new X509Certificate2(bytes);
+            context.Connection.ClientCertificate = cert;
+        }
+    }
+    await next();
+});
 app.UseAuthentication();
 app.UseAuthorization();
 
