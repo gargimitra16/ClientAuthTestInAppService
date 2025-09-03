@@ -1,0 +1,260 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ClientCertAuthDemo/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Certificate": "9.0.8",
+          "Microsoft.AspNetCore.OpenApi": "9.0.8",
+          "Swashbuckle.AspNetCore": "9.0.4"
+        },
+        "runtime": {
+          "ClientCertAuthDemo.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/9.0.8": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "9.0.8"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "9.0.8.0",
+            "fileVersion": "9.0.825.36808"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/9.0.8": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.25"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "9.0.8.0",
+            "fileVersion": "9.0.825.36808"
+          }
+        }
+      },
+      "Microsoft.Extensions.ApiDescription.Server/9.0.0": {},
+      "Microsoft.Extensions.Caching.Abstractions/9.0.8": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/9.0.8": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.8",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Options": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/9.0.8": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "Microsoft.Extensions.Primitives": "9.0.8"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/9.0.8": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.825.36511"
+          }
+        }
+      },
+      "Microsoft.OpenApi/1.6.25": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.6.25.0",
+            "fileVersion": "1.6.25.0"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore/9.0.4": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "9.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "9.0.4",
+          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4",
+          "Swashbuckle.AspNetCore.SwaggerUI": "9.0.4"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/9.0.4": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.25"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "9.0.4.0",
+            "fileVersion": "9.0.4.1727"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/9.0.4": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "9.0.4"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "9.0.4.0",
+            "fileVersion": "9.0.4.1727"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/9.0.4": {
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "9.0.4.0",
+            "fileVersion": "9.0.4.1727"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClientCertAuthDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lPTG8BR/bj4tZ54h330DEI6tJGkjLkkN+9Qpc1DSfGCxR0jEr5irfaTDy5jnT1zpjQyFwI8Icx5u/cvmVBFKxg==",
+      "path": "microsoft.aspnetcore.authentication.certificate/9.0.8",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BwF9sQCKmvu93C/pmKxJjPhF5fFB23MEcgTsGL+7W3wKLYawS4lyFSL5/qh00IJzuADLf+1SmvxMaphbyZYqQQ==",
+      "path": "microsoft.aspnetcore.openapi/9.0.8",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.ApiDescription.Server/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Kzzf7pRey40VaUkHN9/uWxrKVkLu2AQjt+GVeeKLLpiEHAJ1xZRsLSh4ZZYEnyS7Kt2OBOPmsXNdU+wbcOl5w==",
+      "path": "microsoft.extensions.apidescription.server/9.0.0",
+      "hashPath": "microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4h7bsVoKoiK+SlPM+euX/ayGnKZhl47pPCidLTiio9xyG+vgVVfcYxcYQgjm0SCrdSxjG0EGIAKF8EFr3G8Ifw==",
+      "path": "microsoft.extensions.caching.abstractions/9.0.8",
+      "hashPath": "microsoft.extensions.caching.abstractions.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Memory/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-grR+oPyj8HVn4DT8CFUUdSw2pZZKS13KjytFe4txpHQliGM1GEDotohmjgvyl3hm7RFB3FRqvbouEX3/1ewp5A==",
+      "path": "microsoft.extensions.caching.memory/9.0.8",
+      "hashPath": "microsoft.extensions.caching.memory.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xY3lTjj4+ZYmiKIkyWitddrp1uL5uYiweQjqo4BKBw01ZC4HhcfgLghDpPZcUlppgWAFqFy9SgkiYWOMx365pw==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.8",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pYnAffJL7ARD/HCnnPvnFKSIHnTSmWz84WIlT9tPeQ4lHNiu0Az7N/8itihWvcF8sT+VVD5lq8V+ckMzu4SbOw==",
+      "path": "microsoft.extensions.logging.abstractions/9.0.8",
+      "hashPath": "microsoft.extensions.logging.abstractions.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OmTaQ0v4gxGQkehpwWIqPoEiwsPuG/u4HUsbOFoWGx4DKET2AXzopnFe/fE608FIhzc/kcg2p8JdyMRCCUzitQ==",
+      "path": "microsoft.extensions.options/9.0.8",
+      "hashPath": "microsoft.extensions.options.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/9.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tizSIOEsIgSNSSh+hKeUVPK7xmTIjR8s+mJWOu1KXV3htvNQiPMFRMO17OdI1y/4ZApdBVk49u/08QGC9yvLug==",
+      "path": "microsoft.extensions.primitives/9.0.8",
+      "hashPath": "microsoft.extensions.primitives.9.0.8.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.6.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZahSqNGtNV7N0JBYS/IYXPkLVexL/AZFxo6pqxv6A7Uli7Q7zfitNjkaqIcsV73Ukzxi4IlJdyDgcQiMXiH8cw==",
+      "path": "microsoft.openapi/1.6.25",
+      "hashPath": "microsoft.openapi.1.6.25.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4hghaogMoS87Ivjj8s7aGuGsxrsjXZpjNvahLsN+zSLrZQcV8zQyiBweBd9AXC1sGkeNYb9/hbeS1EXrZ/hKjQ==",
+      "path": "swashbuckle.aspnetcore/9.0.4",
+      "hashPath": "swashbuckle.aspnetcore.9.0.4.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-syU8U4Eg3DfhU+BBeDUh66erwDsYOhp82InXbrOsqWP3qoOfQbBtePcTetkLNanovYHYX40alZBE6gQQFtBZkQ==",
+      "path": "swashbuckle.aspnetcore.swagger/9.0.4",
+      "hashPath": "swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GnCikaq7kagEckGGsrVnKl2icRQebyr14/7s3T/rQQO7edOIXkxtjTOJZqbazOxaTXBDCDdSInMiYbMQhFnE5Q==",
+      "path": "swashbuckle.aspnetcore.swaggergen/9.0.4",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2ugT2OvZsKHqk/2rMDmuqDuFmtix0NvzlXxAfnfHROVMTovbx7Z0UsOQHZa462DBTgdBFnR2Ss6wm4fypfymdA==",
+      "path": "swashbuckle.aspnetcore.swaggerui/9.0.4",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
+    }
+  }
+}
