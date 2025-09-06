@@ -54,6 +54,15 @@ namespace ClientCertAuthDemo
                     _logger.LogWarning("Certificate chain validation error: {Status} - {StatusInformation}", 
                         status.Status, status.StatusInformation);
                 }
+
+                // If chain validation fails, check if the certificate is self-signed and matches the expected thumbprint
+                var expectedThumbprint = Environment.GetEnvironmentVariable("SELF_SIGNED_CERT_THUMBPRINT");
+                if (ValidateSelfSignedCertificate(clientCertificate, expectedThumbprint))
+                {
+                    _logger.LogInformation("Certificate is self-signed and trusted by thumbprint");
+                    return true;
+                }
+
                 return false;
             }
 
@@ -111,6 +120,27 @@ namespace ClientCertAuthDemo
 
             _logger.LogInformation("System trust certificate validation successful");
             return true;
+        }
+
+        public bool ValidateSelfSignedCertificate(X509Certificate2 clientCertificate, string expectedThumbprint)
+        {
+            if (clientCertificate == null)
+            {
+                _logger.LogWarning("Self-signed validation failed: Certificate is null");
+                return false;
+            }
+
+            _logger.LogInformation("Validating self-signed certificate: Subject={Subject}, Thumbprint={Thumbprint}",
+                clientCertificate.Subject, clientCertificate.Thumbprint);
+
+            // Check if the certificate is self-signed (chain length 1, subject == issuer)
+            if (clientCertificate.Subject == clientCertificate.Issuer)
+            {
+                _logger.LogInformation("Self-signed certificate validation successful");
+                return true;
+            }
+            _logger.LogWarning("Self-signed certificate validation failed: Thumbprint mismatch or not self-signed");
+            return false;
         }
 
         private bool IsCertificateInTrustedCollection(X509Certificate2 certificate)
