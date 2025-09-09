@@ -30,11 +30,10 @@ builder.Services.AddAuthentication(CertificateAuthenticationDefaults.Authenticat
         options.ValidateCertificateUse = true;
         options.ValidateValidityPeriod = true;
         
-        // Custom validation with proper chain validation
+        // Revert to using CertificateChainValidator
         options.Events = new CertificateAuthenticationEvents {
             OnCertificateValidated = context => {
                 var validator = context.HttpContext.RequestServices.GetRequiredService<CertificateChainValidator>();
-                
                 if (validator.ValidateCertificateWithSystemTrust(context.ClientCertificate))
                 {
                     context.Success();
@@ -43,7 +42,6 @@ builder.Services.AddAuthentication(CertificateAuthenticationDefaults.Authenticat
                 {
                     context.Fail("Invalid client certificate: failed chain validation");
                 }
-                
                 return Task.CompletedTask;
             }
         };

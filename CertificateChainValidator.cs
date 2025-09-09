@@ -32,7 +32,7 @@ namespace ClientCertAuthDemo
             {
                 ChainPolicy = 
                 {
-                    RevocationMode = X509RevocationMode.Online,
+                    RevocationMode = X509RevocationMode.NoCheck, // Disable CRL check
                     RevocationFlag = X509RevocationFlag.EntireChain,
                     VerificationFlags = X509VerificationFlags.NoFlag
                 }
@@ -99,7 +99,7 @@ namespace ClientCertAuthDemo
             {
                 ChainPolicy =
                 {
-                    RevocationMode = X509RevocationMode.Online,
+                    RevocationMode = X509RevocationMode.NoCheck, // Disable CRL check
                     RevocationFlag = X509RevocationFlag.EntireChain,
                     VerificationFlags = X509VerificationFlags.NoFlag
                 }
