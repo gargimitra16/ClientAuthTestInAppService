@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClientCertAuthDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a099d2a0711c0703fe236bfaaa51262f3a1eae6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08b0c1a1b68b6f8075ec9042761afb83ee016b83")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClientCertAuthDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClientCertAuthDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
