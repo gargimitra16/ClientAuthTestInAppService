@@ -1,8 +1,17 @@
 
+
 using Microsoft.AspNetCore.Authentication;
 using ClientCertAuthDemo.Authentication;
+using Serilog;
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = "CertificateHeader";
