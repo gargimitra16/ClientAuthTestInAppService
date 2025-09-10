@@ -43,17 +43,26 @@ namespace ClientCertAuthDemo.Authentication
 
                 _logger.LogInformation("Parsed certificate subject: {Subject}", clientCert.Subject);
                 _logger.LogInformation("Parsed certificate thumbprint: {Thumbprint}", clientCert.Thumbprint);
+                
+                
+                    const string rootBase64 = @"
+                    MIIDdzCCAl+gAwIBAgIEb1Zf0DANBgkqhkiG9w0BAQsFADBvMQswCQYDVQQGEwJV
+                    UzELMAkGA1UECAwCQ0ExEDAOBgNVBAcMB1JlZG1vbmQxFjAUBgNVBAoMDU15Q29t
+                    cGFueSBJbmMuMRMwEQYDVQQLDApFbmdpbmVlcmluZzEZMBcGA1UEAwwQbXljYS5l
+                    eGFtcGxlLmNvbTAeFw0yNTA5MTAxNzAwMDBaFw0zNTA5MDcxNzAwMDBaMG8xCzAJ
+                    BgNVBAYTAlVTMQswCQYDVQQIDAJDQTEQMA4GA1UEBwwHUmVkbW9uZDEWMBQGA1UE
+                    CgwNTXlDb21wYW55IEluYy4xEzARBgNVBAsMCkVuZ2luZWVyaW5nMRkwFwYDVQQD
+                    DBBteWNhLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+                    AQEAzK3...
+                    "; // Truncated for brevity
 
-                // 🔍 Build chain manually
-                var chain = new X509Chain();
-                chain.ChainPolicy = new X509ChainPolicy
-                {
-                    RevocationMode = X509RevocationMode.NoCheck, // 🚫 Skip CRL/OCSP
-                    // RevocationFlag = X509RevocationFlag.ExcludeRoot,
-                    VerificationFlags = X509VerificationFlags.NoFlag,
-                    TrustMode = X509ChainTrustMode.System,
-                    ApplicationPolicy = { new Oid("1.3.6.1.5.5.7.3.2") } // Optional: Client Auth EKU
-                };
+                    var rootBytes = Convert.FromBase64String(rootBase64.Replace("\n", "").Replace("\r", "").Trim());
+                    var trustedRoot = new X509Certificate2(rootBytes);
+
+                    var chain = new X509Chain();
+                    chain.ChainPolicy.ExtraStore.Add(trustedRoot);
+                    chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
+                chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
 
                 bool isValid = chain.Build(clientCert);
                 _logger.LogInformation("Certificate chain build result: {IsValid}", isValid);
