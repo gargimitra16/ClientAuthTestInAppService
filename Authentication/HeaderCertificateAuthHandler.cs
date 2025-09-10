@@ -82,7 +82,7 @@ TZ4NYuiCby7v"; // Truncated for brevity
                 
                     var chain = new X509Chain();
                     chain.ChainPolicy.ExtraStore.Add(trustedRoot);
-                    chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
+                   // chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
                 chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
                 _logger.LogInformation("Loaded the root cert in ExtraStore.SubjectName: {Subject}", trustedRoot.Subject);
                 bool isValid = chain.Build(clientCert);
