@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "93+YzKAYPio=",
+  "dgSpecHash": "10/NFpLbznc=",
   "success": true,
-  "projectFilePath": "D:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj",
+  "projectFilePath": "d:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj",
   "expectedPackageFiles": [
     "D:\\NUGET_PACKAGES\\microsoft.aspnetcore.authentication.certificate\\9.0.8\\microsoft.aspnetcore.authentication.certificate.9.0.8.nupkg.sha512",
     "D:\\NUGET_PACKAGES\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
