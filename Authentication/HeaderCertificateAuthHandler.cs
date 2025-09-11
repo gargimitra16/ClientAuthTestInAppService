@@ -81,10 +81,12 @@ TZ4NYuiCby7v"; // Truncated for brevity
                     var trustedRoot = new X509Certificate2(rootBytes);
                 
                     var chain = new X509Chain();
-                    chain.ChainPolicy.ExtraStore.Add(trustedRoot);
+                   // chain.ChainPolicy.ExtraStore.Add(trustedRoot);
                    // chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
                 chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
-                _logger.LogInformation("Loaded the root cert in ExtraStore.SubjectName: {Subject}", trustedRoot.Subject);
+                chain.ChainPolicy.TrustMode = X509ChainTrustMode.CustomRootTrust;
+                chain.ChainPolicy.CustomTrustStore.Add(trustedRoot);
+                _logger.LogInformation("Loaded the root cert in CustomRootStore.SubjectName: {Subject}", trustedRoot.Subject);
                 bool isValid = chain.Build(clientCert);
                 _logger.LogInformation("Certificate chain build result: {IsValid}", isValid);
 
