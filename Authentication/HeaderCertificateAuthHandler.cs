@@ -98,12 +98,12 @@ TZ4NYuiCby7v"; // Truncated for brevity
                     return Task.FromResult(AuthenticateResult.Fail($"Certificate chain invalid: {errors}"));
                 }
 
-                var trustedIssuer = "CN=MyRootCA";
-                if (!clientCert.Issuer.Contains(trustedIssuer))
-                {
-                    _logger.LogWarning("Certificate not issued by trusted CA. Issuer: {Issuer}", clientCert.Issuer);
-                    return Task.FromResult(AuthenticateResult.Fail("Certificate not issued by trusted CA"));
-                }
+                //var trustedIssuer = "CN=MyRootCA";
+                //if (!clientCert.Issuer.Contains(trustedIssuer))
+                //{
+                  //  _logger.LogWarning("Certificate not issued by trusted CA. Issuer: {Issuer}", clientCert.Issuer);
+                //    return Task.FromResult(AuthenticateResult.Fail("Certificate not issued by trusted CA"));
+              //  }
 
                 var claims = new[]
                 {

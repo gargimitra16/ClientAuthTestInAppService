@@ -51,3 +51,9 @@ D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\Serilog.Sinks.Console.
 D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\Serilog.Sinks.File.dll
 D:\clientCertAuthDemo\ClientCertAuthDemo\obj\Debug\net9.0\ClientCertAuthDemo.sourcelink.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\web.config
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\appsettings.Development.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\appsettings.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\ClientCertAuthDemo.deps.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\ClientCertAuthDemo.runtimeconfig.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\ClientCertAuthDemo.staticwebassets.endpoints.json
