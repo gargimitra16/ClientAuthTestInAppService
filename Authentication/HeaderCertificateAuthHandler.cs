@@ -84,8 +84,8 @@ TZ4NYuiCby7v"; // Truncated for brevity
                    // chain.ChainPolicy.ExtraStore.Add(trustedRoot);
                    // chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
                 chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
-                chain.ChainPolicy.TrustMode = X509ChainTrustMode.CustomRootTrust;
-                chain.ChainPolicy.CustomTrustStore.Add(trustedRoot);
+               // chain.ChainPolicy.TrustMode = X509ChainTrustMode.CustomRootTrust;
+              //  chain.ChainPolicy.CustomTrustStore.Add(trustedRoot);
                 _logger.LogInformation("Loaded the root cert in CustomRootStore.SubjectName: {Subject}", trustedRoot.Subject);
                 bool isValid = chain.Build(clientCert);
                 _logger.LogInformation("Certificate chain build result: {IsValid}", isValid);
