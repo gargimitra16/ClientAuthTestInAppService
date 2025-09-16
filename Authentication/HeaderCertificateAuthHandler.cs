@@ -77,16 +77,17 @@ y6rIaSuPW2uJq36HNYfJnjSy8JbqaG2YkKzrg0Tl149003UbHpNRQippl15M2XOC
 MySxDEyNm9dQBjkrgCR7doeAJE5cfIJqhJAJSG812iT6+uQivJJaq5A+mTq8zqrh
 TZ4NYuiCby7v"; // Truncated for brevity
 
-                    var rootBytes = Convert.FromBase64String(rootBase64.Replace("\n", "").Replace("\r", "").Trim());
-                    var trustedRoot = new X509Certificate2(rootBytes);
+                    //var rootBytes = Convert.FromBase64String(rootBase64.Replace("\n", "").Replace("\r", "").Trim());
+                    //var trustedRoot = new X509Certificate2(rootBytes);
                 
                     var chain = new X509Chain();
                    // chain.ChainPolicy.ExtraStore.Add(trustedRoot);
                    // chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllowUnknownCertificateAuthority;
                 chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
-               // chain.ChainPolicy.TrustMode = X509ChainTrustMode.CustomRootTrust;
-              //  chain.ChainPolicy.CustomTrustStore.Add(trustedRoot);
-                _logger.LogInformation("Loaded the root cert in CustomRootStore.SubjectName: {Subject}", trustedRoot.Subject);
+                // chain.ChainPolicy.TrustMode = X509ChainTrustMode.CustomRootTrust;
+                //  chain.ChainPolicy.CustomTrustStore.Add(trustedRoot);
+                //_logger.LogInformation("Loaded the root cert in CustomRootStore.SubjectName: {Subject}", trustedRoot.Subject);
+                _logger.LogInformation("Starting to buildchain");
                 bool isValid = chain.Build(clientCert);
                 _logger.LogInformation("Certificate chain build result: {IsValid}", isValid);
 

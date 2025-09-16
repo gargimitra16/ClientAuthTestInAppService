@@ -40,3 +40,14 @@ D:\clientCertAuthDemo\ClientCertAuthDemo\obj\Release\net9.0\refint\ClientCertAut
 D:\clientCertAuthDemo\ClientCertAuthDemo\obj\Release\net9.0\ClientCertAuthDemo.pdb
 D:\clientCertAuthDemo\ClientCertAuthDemo\obj\Release\net9.0\ClientCertAuthDemo.genruntimeconfig.cache
 D:\clientCertAuthDemo\ClientCertAuthDemo\obj\Release\net9.0\ref\ClientCertAuthDemo.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.AspNetCore.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Extensions.Hosting.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Extensions.Logging.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Formatting.Compact.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Settings.Configuration.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Sinks.Console.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Sinks.Debug.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Release\net9.0\Serilog.Sinks.File.dll
+D:\clientCertAuthDemo\ClientCertAuthDemo\obj\Release\net9.0\ClientCertAuthDemo.sourcelink.json
