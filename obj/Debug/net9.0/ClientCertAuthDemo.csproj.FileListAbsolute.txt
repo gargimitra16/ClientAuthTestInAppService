@@ -81,3 +81,9 @@ D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publis
 D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\ClientCertAuthDemo.deps.json
 D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\ClientCertAuthDemo.runtimeconfig.json
 D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\ClientCertAuthDemo.staticwebassets.endpoints.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\publish\web.config
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\publish\appsettings.Development.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\publish\appsettings.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\publish\ClientCertAuthDemo.deps.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\publish\ClientCertAuthDemo.runtimeconfig.json
+D:\clientCertAuthDemo\ClientCertAuthDemo\bin\Debug\net9.0\publish\publish\publish\publish\publish\publish\ClientCertAuthDemo.staticwebassets.endpoints.json

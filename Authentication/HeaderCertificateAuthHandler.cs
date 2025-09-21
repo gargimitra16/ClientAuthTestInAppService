@@ -39,7 +39,7 @@ namespace ClientCertAuthDemo.Authentication
             {
                 
                 // Open the CurrentUser's "Client Authentication Issuer" certificate store
-                using (var store = new X509Store("ClientAuthIssuers", StoreLocation.CurrentUser))
+                using (var store = new X509Store("ClientAuthIssuers", StoreLocation.LocalMachine))
                 {
                     store.Open(OpenFlags.ReadOnly);
 
