@@ -45,7 +45,7 @@ namespace ClientCertAuthDemo.Authentication
 
                     foreach (var cert in store.Certificates)
                     {
-                         _logger.LogInformation("Found certificate in Client Authentication Issuer store:");
+                         _logger.LogInformation("[NewLog]:Found certificate in Client Authentication Issuer store:");
                             _logger.LogInformation("Subject: {Subject}", cert.Subject);
                             _logger.LogInformation("Thumbprint: {Thumbprint}", cert.Thumbprint);
                     }
