@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj": {}
+    "D:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj": {}
   },
   "projects": {
-    "d:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj": {
+    "D:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj",
+        "projectUniqueName": "D:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj",
         "projectName": "ClientCertAuthDemo",
-        "projectPath": "d:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj",
+        "projectPath": "D:\\clientCertAuthDemo\\ClientCertAuthDemo\\ClientCertAuthDemo.csproj",
         "packagesPath": "D:\\NUGET_PACKAGES",
-        "outputPath": "d:\\clientCertAuthDemo\\ClientCertAuthDemo\\obj\\",
+        "outputPath": "D:\\clientCertAuthDemo\\ClientCertAuthDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
