@@ -39,7 +39,7 @@ namespace ClientCertAuthDemo.Authentication
             {
                 
                 // Open the CurrentUser's "Client Authentication Issuer" certificate store
-                using (var store = new X509Store("ClientAuthIssuers", StoreLocation.LocalMachine))
+                using (var store = new X509Store("ClientAuthIssuer", StoreLocation.LocalMachine))
                 {
                     store.Open(OpenFlags.ReadOnly);
 
@@ -79,6 +79,11 @@ namespace ClientCertAuthDemo.Authentication
                 {
                     var errors = string.Join("; ", chain.ChainStatus.Select(s => s.StatusInformation.Trim()));
                     _logger.LogWarning("Certificate chain invalid: {Errors}", errors);
+                    
+                    foreach (X509ChainStatus status in chain.ChainStatus)
+                    {
+                        Console.WriteLine($"Status: {status.Status}, Info: {status.StatusInformation}");
+                    }
                     return Task.FromResult(AuthenticateResult.Fail($"Certificate chain invalid: {errors}"));
                 }
 
